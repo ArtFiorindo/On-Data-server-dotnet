@@ -1,0 +1,22 @@
+meta {
+  name: create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/ocorrencias
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "data": "2024-10-07",
+    "valor": 499,
+    "duracao": 14,
+    "aprovado": true,
+    "idPaciente": 1,
+    "idDoenca": 1
+  }
+}

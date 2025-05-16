@@ -1,0 +1,32 @@
+@model OnData.Models.PacienteOcorrenciaViewModel
+
+
+<div class="container">
+    <h2>Excluir Paciente</h2>
+
+    <h3>Tem certeza de que deseja excluir este paciente e sua ocorrência associada?</h3>
+
+    <div>
+        <h3>Paciente</h3>
+        <p><strong>Nome:</strong> @Model.Paciente.Nome</p>
+        <p><strong>CPF:</strong> @Model.Paciente.Cpf</p>
+        <p><strong>Email:</strong> @Model.Paciente.Email</p>
+        <p><strong>Telefone:</strong> @Model.Paciente.Telefone</p>
+        <p><strong>Endereço:</strong> @Model.Paciente.Endereco</p>
+    </div>
+
+    @if (Model.Ocorrencia != null)
+    {
+        <div>
+            <h3>Ocorrência</h3>
+            <p><strong>Data:</strong> @Model.Ocorrencia.Data?.ToShortDateString()</p>
+            <p><strong>Valor:</strong> @Model.Ocorrencia.Valor</p>
+            <p><strong>Aprovado:</strong> @(Model.Ocorrencia.Aprovado == true ? "Sim" : "Não")</p>
+        </div>
+    }
+
+    <form action="@Url.Action("DeleteConfirmed", "Cadastro", new { id = Model.Paciente.Id })" method="post">
+        <button type="submit">Confirmar Exclusão</button>
+        <a href="@Url.Action("Index", "Cadastro")" class="button">Cancelar</a>
+    </form>
+</div>

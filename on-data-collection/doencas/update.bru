@@ -1,0 +1,17 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/doencas/2
+  body: json
+  auth: none
+}
+
+body:json {
+    {
+      "nomeDoenca": "Dente Quebrado"
+    }
+}

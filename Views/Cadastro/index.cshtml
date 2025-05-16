@@ -1,0 +1,39 @@
+@model IEnumerable<OnData.Models.Paciente>
+
+
+
+<div class="container">
+    <h2 class="my-4">Lista de Pacientes e Ocorrências</h2>
+
+    <div class="table-container">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var paciente in Model)
+            {
+                <tr>
+                    <td>@paciente.Nome</td>
+                    <td>@paciente.Cpf</td>
+                    <td>@paciente.Email</td>
+                    <td>@paciente.Telefone</td>
+                    <td>@paciente.Endereco</td>
+                    <td class="action-links">
+                        <a href="@Url.Action("Edit", "Cadastro", new { id = paciente.Id })">Editar</a> |
+                        <a href="@Url.Action("Details", "Cadastro", new { id = paciente.Id })">Detalhes</a> |
+                        <a href="@Url.Action("Delete", "Cadastro", new { id = paciente.Id })">Excluir</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

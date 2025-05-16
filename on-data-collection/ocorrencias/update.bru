@@ -1,0 +1,22 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/ocorrencias/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "data": "2024-10-07",
+    "valor": 499,
+    "duracao": 14,
+    "aprovado": true,
+    "idPaciente": 1,
+    "idDoenca": 1
+  }
+}

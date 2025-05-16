@@ -1,0 +1,40 @@
+@model OnData.Models.PacienteOcorrenciaViewModel
+
+
+<div class="container">
+    <h2>Cadastrar Paciente e Ocorrência</h2>
+
+    <form asp-action="Create" method="post" class="form">
+        <h3>Paciente</h3>
+        <label>Nome</label>
+        <input name="Paciente.Nome" type="text" />
+
+        <label>CPF</label>
+        <input name="Paciente.Cpf" type="text" placeholder="999.999.999-99" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato 999.999.999-99" />
+
+        <label>Email</label>
+        <input name="Paciente.Email" type="email" />
+
+        <label>Telefone</label>
+        <input name="Paciente.Telefone" type="tel" />
+
+        <label>Endereço</label>
+        <input name="Paciente.Endereco" type="text" />
+
+        <h3>Ocorrência</h3>
+        <label>Data</label>
+        <input name="Ocorrencia.Data" type="date" />
+
+        <label>Valor</label>
+        <input name="Ocorrencia.Valor" type="number" step="0.01" />
+
+        
+        <div class="checkbox-container">
+            <input type="hidden" name="Ocorrencia.Aprovado" value="false" />
+            <input name="Ocorrencia.Aprovado" type="checkbox" value="true" />
+            <label>Aprovado</label>
+        </div>
+
+        <button type="submit">Salvar</button>
+    </form>
+</div>

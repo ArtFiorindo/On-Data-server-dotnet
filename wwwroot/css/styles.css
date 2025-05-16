@@ -1,0 +1,177 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f8;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #8a71e0;
+    height: 140px;
+    text-align: center;
+}
+
+.header .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .logo:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo Principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    min-height: calc(100vh - 160px);
+}
+
+/* Cabeçalhos */
+h1, h2, h3 {
+    color: #4e3c97;
+    margin-bottom: 1rem;
+}
+
+/* Botões */
+.button, button {
+    background-color: #8a71e0;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, button:hover {
+    background-color: #7b63d1;
+}
+
+/* Formulários */
+.form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #d9c2f5;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    text-align: left;
+}
+
+/* Centralizar Títulos e Botão no Formulário */
+.form h3 {
+    text-align: center;
+    color: #4e3c97;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 1.5rem auto 0;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: #8a71e0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #7b63d1;
+}
+
+form label {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Alinhamento do Checkbox e do Label */
+.form .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.form .checkbox-container label {
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+/* Ajuste da Largura da Tabela */
+.table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #8a71e0;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f3e9ff;
+}
+
+/* Links de Ações */
+.action-links a {
+    color: #8a71e0;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.action-links a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #8a71e0;
+    color: white;
+    text-align: center;
+    font-size: 0.875rem;
+    height: 90px;
+}

@@ -1,0 +1,22 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/pacientes/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "cpf": "12345678901",
+    "nome": "Carlos Henrique",
+    "email": "joao.silva@example.com",
+    "telefone": "(11) 98765-4321",
+    "endereco": "Rua ABC, 123",
+    "fumante": true
+  }
+}
