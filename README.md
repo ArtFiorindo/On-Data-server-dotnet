@@ -89,13 +89,12 @@ O projeto utiliza uma arquitetura em camadas, seguindo o padrão **MVC (Model-Vi
 
 ### Controllers
 
-#### `RecommendationController` (Novo)
+#### `RecommendationController`
 Responsável por fornecer recomendações de produtos utilizando um modelo de machine learning.
 
 - **GET /api/Recommendation/{userId}**: Retorna uma lista de produtos recomendados para o usuário especificado. Apenas produtos com pontuação acima de 3.5 são retornados.
 
 #### `CadastroController`
-
 Gerencia o CRUD de Pacientes e Ocorrências com visualizações. Principais endpoints:
 
 - **GET /Cadastro**: Exibe lista de pacientes e suas ocorrências.
@@ -106,7 +105,6 @@ Gerencia o CRUD de Pacientes e Ocorrências com visualizações. Principais endp
 - **GET /Cadastro/Delete/{id}** e **POST /Cadastro/Delete/{id}**: Confirma e processa exclusão.
 
 #### `OcorrenciaController`
-
 Responsável pelas operações de CRUD para ocorrências via API.
 
 - **GET /api/Ocorrencias**: Retorna lista de ocorrências.
@@ -116,7 +114,6 @@ Responsável pelas operações de CRUD para ocorrências via API.
 - **DELETE /api/Ocorrencias/{id}**: Exclui uma ocorrência.
 
 #### `PacienteController`
-
 Gerencia CRUD para pacientes via API.
 
 - **GET /api/Pacientes**: Retorna lista de pacientes.
@@ -126,7 +123,6 @@ Gerencia CRUD para pacientes via API.
 - **DELETE /api/Pacientes/{id}**: Exclui um paciente.
 
 #### `HomeController`
-
 Renderiza a página inicial da aplicação.
 
 - **GET /Home/Index**: Exibe a página inicial com links para criar e listar pacientes e ocorrências.
@@ -235,5 +231,3 @@ public void RecommendProducts_ModelReturnsValidPredictions()
 ## Conclusão
 
 Este projeto demonstra a aplicação de boas práticas de desenvolvimento em C#/.NET, incluindo arquitetura em camadas, design patterns, sistema de recomendação com ML.NET e testes automatizados. A API está pronta para ser integrada ao frontend e utilizada em produção.
-
----
